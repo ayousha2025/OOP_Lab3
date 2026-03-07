@@ -36,7 +36,7 @@ class BankAccount{
 
 class Main{
 
-    public static void main(){
+    public static void main(String [] args){
         BankAccount account1 = new BankAccount();
         BankAccount account2 = new BankAccount(78912 , "Asad" , 506789.345f);
         account1.display();
