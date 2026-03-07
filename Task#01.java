@@ -1,24 +1,45 @@
-public class BankAccount {
-    int AccountNumber;
-    String AccountHolderName;
-    int InitialBalance;
+//     ====== TASK 01 =====
+//A bank wants to initialize customer accounts at the time of account creation.
+//Each account has:
+// Account number
+// Account holder name
+// Initial balance
+//Task:
+//1. Create a class BankAccount.
+//2. Use a constructor to assign initial values.
+//3. Create one account with balance and one without balance (default balance = 0).
+//4. Display account details.
+class BankAccount{
+    int account_number;
+    String accountHolder_name;
+    float initialBalance;
 
-    BankAccount(int number , String name , int initialBalance){
-        this.AccountNumber = number;
-        this. AccountHolderName = name;
-        this.InitialBalance = initialBalance ;
+    //default constructor
+    BankAccount(){
+        account_number = 12345;
+        accountHolder_name = "Ali";
+        initialBalance = 0f;
     }
-    void display(){
-        System.out.println("Account Number: " + AccountNumber);
-        System.out.println("Account Holder Name: " + AccountHolderName);
-        System.out.println("Initial Balance: " + InitialBalance);
+    //parametrized constructor
+    BankAccount(int account_number, String accountHolder_name, float initialBalance){
+        this.account_number = account_number;
+        this.accountHolder_name = accountHolder_name;
+        this.initialBalance = initialBalance;
     }
+    public void display(){
+        System.out.println("\n--- Account Details ---");
+        System.out.println("Account no: " + account_number);
+        System.out.println("Account holder Name: " + accountHolder_name);
+        System.out.println("Initial Balance: Rs " + initialBalance);
+    }
+}
 
-    public static void main(String[] arg){
-        BankAccount account1 = new BankAccount(12345 , "Ali" , 256000);
+class Main{
+
+    public static void main(){
+        BankAccount account1 = new BankAccount();
+        BankAccount account2 = new BankAccount(78912 , "Asad" , 506789.345f);
         account1.display();
-        BankAccount account2 = new BankAccount(54321 , "Umair" , 0);
         account2.display();
-
     }
 }
