@@ -29,7 +29,7 @@ class Mobile {
         System.out.println("Price: " + price);
     }
 
-    public static void main(){
+    public static void main(String[] args){
         Mobile phone1 = new Mobile();
         Mobile phone2 = new Mobile("Oppo" , "A6 pro" , 250000f);
         phone1.display();
